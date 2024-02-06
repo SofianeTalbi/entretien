@@ -1,0 +1,139 @@
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3f48cc;">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <!-- Lien vers la page d'accueil -->
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:4200/" style="color: white;">Home</a>
+      </li>
+      <!-- Lien vers la réservation -->
+      <li class="nav-item">
+        <a class="nav-link" href="https://wwws.airfrance.fr/" style="color: white;">Booking</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Formulaire d'inscription utilisateur -->
+<div class="champs">
+<div class="container mt-4">
+    <form>
+      <!-- Première ligne du formulaire -->
+      <div class="row">
+        <!-- Champ pour le prénom -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}"  class="form-control" [ngClass]="{'is-valid': firstname !== '', 'is-invalid': firstname === ''}" id="firstname" placeholder="First Name *"> 
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid first name.
+            </div>
+          </div>
+        </div>
+        <!-- Champ pour le nom de famille -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" class="form-control" [ngClass]="{'is-valid': lastname !== '', 'is-invalid': lastname === ''}" id="lastname" placeholder="Last Name *"> 
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid last name.
+            </div>
+          </div>
+        </div>
+        <!-- Champ pour l'ID de la société -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="companyid" [ngModelOptions]="{standalone: true}" class="form-control" [ngClass]="{'is-valid': companyid !== '', 'is-invalid': companyid === ''}" id="companyid" placeholder="Company ID *"> 
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid company id.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deuxième ligne du formulaire -->
+      <div class="row">
+        <!-- Champ pour le poste -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="position" [ngModelOptions]="{standalone: true}" class="form-control" [ngClass]="{'is-valid': position !== '', 'is-invalid': position === ''}" id="position" placeholder="Position *">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid position.
+            </div>
+          </div>
+        </div>
+        <!-- Champ pour la date de début -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="startdate" [ngModelOptions]="{standalone: true}" class="form-control" [ngClass]="{'is-valid': startdate !== null, 'is-invalid': startdate === null}" id="startdate" placeholder="Start date *" bsDatepicker>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid start date.
+            </div>
+          </div>
+        </div>
+        <!-- Menu déroulant pour sélectionner la ville -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <select class="form-control no-border" [(ngModel)]="selectedCity" [ngModelOptions]="{standalone: true}" id="cities" placeholder="City">
+              <option *ngFor="let city of citiesList" [value]="city">{{ city }}</option>
+            </select>
+            <div class="valid-feedback">
+              Looks good!
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton pour soumettre le formulaire -->
+      <button type="submit" (click)="save()" class="btn btn-primary custom-btn">Add user</button>
+    </form>
+</div>
+
+<!-- Tableau des utilisateurs -->
+<div class="container mt-4" >
+<h1>User Table</h1>
+<table class="table">
+<thead>    
+<tr>
+    <!-- Entêtes de colonne -->
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Company ID</th>  
+    <th scope="col">Position</th>
+    <th scope="col">Start Date</th>
+    <th scope="col">Selected City</th>
+    <th scope="col">Option</th>
+  </tr>
+</thead>
+<tbody>
+    <!-- Boucle sur les utilisateurs pour afficher les détails -->
+    <tr *ngFor="let StudentItem of StudentArray">
+    <td>{{ StudentItem.firstname }}</td>
+    <td>{{ StudentItem.lastname }}</td>
+    <td>{{ StudentItem.companyid }}</td>
+    <td>{{ StudentItem.position }}</td>
+    <td>{{ StudentItem.startdate | date:'dd/MM/yyyy' }}</td>
+    <td>{{ StudentItem.selectedCity }}</td>
+    <!-- Boutons pour modifier ou supprimer un utilisateur -->
+    <td>
+      <button type="button" class="btn btn-success" (click)="setUpdate(StudentItem)">Edit</button>
+      <button type="button" class="btn btn-danger" (click)="setDelete(StudentItem)">Delete</button>            
+    </td>
+  </tr>          
+</tbody>
+</table>
+</div>
+</div>

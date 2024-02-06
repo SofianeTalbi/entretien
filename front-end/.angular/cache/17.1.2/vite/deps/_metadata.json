@@ -1,0 +1,82 @@
+{
+  "hash": "63dae6d4",
+  "configHash": "7e6fb4a9",
+  "lockfileHash": "c5f8adf8",
+  "browserHash": "96fa6f55",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "921fc364",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "d5671da3",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "33dc5a12",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "44b66de9",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "01e4d53e",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "605a09dd",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "50e813a5",
+      "needsInterop": false
+    },
+    "@ng-select/ng-select": {
+      "src": "../../../../../node_modules/@ng-select/ng-select/fesm2022/ng-select-ng-select.mjs",
+      "file": "@ng-select_ng-select.js",
+      "fileHash": "90b4e5c2",
+      "needsInterop": false
+    },
+    "ngx-bootstrap/datepicker": {
+      "src": "../../../../../node_modules/ngx-bootstrap/datepicker/fesm2022/ngx-bootstrap-datepicker.mjs",
+      "file": "ngx-bootstrap_datepicker.js",
+      "fileHash": "f3445e97",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-XQ44EKSW": {
+      "file": "chunk-XQ44EKSW.js"
+    },
+    "chunk-ELBUVGLX": {
+      "file": "chunk-ELBUVGLX.js"
+    },
+    "chunk-A7JKL6BG": {
+      "file": "chunk-A7JKL6BG.js"
+    },
+    "chunk-TRQNDGLO": {
+      "file": "chunk-TRQNDGLO.js"
+    },
+    "chunk-FQZ7QDFW": {
+      "file": "chunk-FQZ7QDFW.js"
+    },
+    "chunk-6ON6F25T": {
+      "file": "chunk-6ON6F25T.js"
+    }
+  }
+}
